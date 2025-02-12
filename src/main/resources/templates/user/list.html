@@ -20,11 +20,11 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="user : ${userlist}" th:object="${user}">
-				<td class="center" th:text="*{id}"></td>
-				<td th:text="*{name}"></td>
-				<td th:text="*{address}"></td>
-				<td class="center" th:text="*{phone}"></td>
+			<tr th:each="user : ${userList}">
+				<td class="center" th:text="${user.id}"></td>
+				<td th:text="${user.name}"></td>
+				<td th:text="${user.address}"></td>
+				<td class="center" th:text="${user.phone}"></td>
 				<td class="center" th:text="${#dates.format(user.updateDate, 'yyyy/MM/dd')}"></td>
 				<td class="center" th:text="${#dates.format(user.createDate, 'yyyy/MM/dd')}"></td>
 				<td class="center" th:text="${#dates.format(user.deleteDate, 'yyyy/MM/dd')}"></td>
